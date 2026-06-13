@@ -20,4 +20,6 @@ attendance_tracker_{input}/
 ## Requirements
 - bash
 - python3
+## Video walkthrough
+Link : coming soon
 
