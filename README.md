@@ -38,13 +38,15 @@ Using "mkdir -p", the script creates:
 - a subfolder called Helpers/
 - a subfolder called reports/
 
-### 4. Copying the source files
-Using "cp", the script copies the files provided for this assignment
-into the correct locations:
-- attendance_checker.py goes into the main project folder
-- assets.csv and config.json go into Helpers/
-- reports.log goes into reports/
-
+### 4. Generating the source files
+Instead of copying pre-existing files, the script generates the
+required files directly using "cat << 'EOF' > filename" blocks.
+This writes the content for each file straight into the script,
+so the repository only needs setup_project.sh and README.md to work:
+- config.json and assets.csv are generated inside Helpers/
+- attendance_checker.py is generated in the main project folder
+- reports.log is created empty with "touch" (it gets filled when
+  attendance_checker.py is run)
 ### 5. Updating thresholds with sed
 The script asks the user if they want to change the attendance
 thresholds (warning and failure). If the user types "y", the script
@@ -126,7 +128,7 @@ attendance_tracker_{input}/
 │   └── config.json
 └── reports/
     └── reports.log
-## Source Files (Provided for the Assignment)
+## Generated Source Files
 
 - attendance_checker.py: Python script that reads config.json and
   assets.csv, calculates each student's attendance percentage, and
