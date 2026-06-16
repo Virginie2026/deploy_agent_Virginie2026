@@ -147,6 +147,9 @@ attendance_tracker_{input}/
 ## Requirements
 - bash
 - python3
+## Video Demonstration
 
-## Video Walkthrough
-Link: coming soon
+The full project demonstration is available here:
+
+https://drive.google.com/file/d/16RxGkK4aN5ZPnSUBBPAW9VdqtkJzFXxO/view?usp=drive_link
+
