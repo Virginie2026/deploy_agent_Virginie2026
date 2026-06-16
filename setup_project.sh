@@ -103,10 +103,10 @@ sed -i "s/\"failure\": [0-9]*/\"failure\": $NEW_FAILURE/" "$PROJECT_DIR/Helpers/
 echo "Warning threshold set to : $NEW_WARNING%"
 echo "Failure threshold set to : $NEW_FAILURE%"
 fi
-if python3 --version &>/dev/null; then
-echo "Python3 is installed: $(python3 --version)"
+if command -v python3 &>/dev/null; then
+    echo "Python3 is installed: $(python3 --version)"
 else
-echo "Python3 is not installed"
+    echo "Python3 is not installed"
 fi
 echo "Checking project structure..."
 for FILE in "$PROJECT_DIR/attendance_checker.py" "$PROJECT_DIR/Helpers/assets.csv" "$PROJECT_DIR/Helpers/config.json" "$PROJECT_DIR/reports/reports.log"; do
